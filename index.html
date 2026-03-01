@@ -4,31 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Ned Dispatch – Professional freight dispatch for reefer, dry van, flatbed, and car hauling. Nationwide coverage, on-time every time." />
-    <meta property="og:title" content="NED DISPATCH – Freight Dispatch Services" />
+    <meta property="og:title" content="NEDispatch – Freight Dispatch Services" />
     <meta property="og:description" content="Professional freight dispatch for reefer, dry van, flatbed, and car hauling. Nationwide coverage, on-time every time." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="NED DISPATCH – Freight Dispatch Services" />
+    <meta name="twitter:title" content="NEDispatch – Freight Dispatch Services" />
     <meta name="twitter:description" content="Professional freight dispatch for reefer, dry van, flatbed, and car hauling. Nationwide coverage, on-time every time." />
-    <title>NED DISPATCH – Freight Dispatch Services</title>
+    <title>NEDispatch – Freight Dispatch Services</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="site-header">
       <a href="#" class="logo">
         <span class="logo-icon" aria-hidden="true">
-          <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M2 14h2v2H2v-2zm20 0h2v2h-2v-2zM4 12V6h6v6H4zm8 0V4h10l4 4v4h-2V9h-2v3h-10z" fill="currentColor"/>
+          <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 16h2v2H2v-2zm24 0h2v2h-2v-2zM6 14V7h6v7H6zm10 0V5h10l4 4v5h-2V9.5L24 9v5h-8z" fill="currentColor"/>
           </svg>
         </span>
-        <span class="logo-text">NED DISPATCH</span>
+        <span class="logo-text"><span class="logo-ned">NED</span><span class="logo-ispatch">ispatch</span></span>
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Main navigation">
         <a href="#home">Home</a>
         <a href="#services">Services</a>
         <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
       </nav>
       <a href="#contact" class="btn btn-cta">Get a Quote</a>
@@ -37,7 +39,7 @@
     <main id="main-content">
       <section id="home" class="hero">
         <div class="hero-overlay"></div>
-        <div class="hero-content container">
+        <div class="hero-content container hero-entrance">
           <p class="hero-label">RELIABLE FREIGHT DISPATCH</p>
           <h1 class="hero-title">
             Moving Your Freight <span class="accent">Forward</span>
@@ -53,7 +55,7 @@
         </div>
       </section>
 
-      <section id="about" class="about section">
+      <section id="about" class="about section section-reveal">
         <div class="container about-grid">
           <div class="about-content">
             <p class="section-label">ABOUT US</p>
@@ -101,14 +103,14 @@
         </div>
       </section>
 
-      <section id="services" class="services section">
+      <section id="services" class="services section section-reveal">
         <div class="container">
           <p class="section-label section-label-center">WHAT WE HAUL</p>
           <h2 class="section-title section-title-center">Our Services</h2>
           <div class="services-grid">
             <article class="service-card">
               <div class="service-icon service-icon-reefer" aria-hidden="true">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83M8 12a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><path d="M12 8v8M8 12h8"/></svg>
               </div>
               <h3 class="service-title">Reefer</h3>
               <p class="service-desc">
@@ -118,7 +120,7 @@
             </article>
             <article class="service-card">
               <div class="service-icon service-icon-dryvan" aria-hidden="true">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="1"/><path d="M2 10h20M8 6V4M16 6V4"/></svg>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="11" rx="1"/><path d="M3 12h18M8 7V5M16 7V5"/><path d="M7 18v2M17 18v2"/></svg>
               </div>
               <h3 class="service-title">Dry Van</h3>
               <p class="service-desc">
@@ -128,7 +130,7 @@
             </article>
             <article class="service-card">
               <div class="service-icon service-icon-car" aria-hidden="true">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17h14v-5H5v5zM5 12l2-4h10l2 4"/><circle cx="7.5" cy="17" r="1.5"/><circle cx="16.5" cy="17" r="1.5"/></svg>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14v-4l-2-5H7l-2 5v4z"/><path d="M5 13h14"/><circle cx="7.5" cy="17" r="1.5"/><circle cx="16.5" cy="17" r="1.5"/></svg>
               </div>
               <h3 class="service-title">Car Hauling</h3>
               <p class="service-desc">
@@ -138,7 +140,7 @@
             </article>
             <article class="service-card">
               <div class="service-icon service-icon-flatbed" aria-hidden="true">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="10" width="16" height="6" rx="0.5"/><path d="M18 14h2v2h-2zM4 16H2M22 16h-2"/><path d="M8 10V8h4v2"/></svg>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14h14v-4H8V8H2v6z"/><path d="M16 10v4h4"/><circle cx="5" cy="14" r="1.5"/><circle cx="13" cy="14" r="1.5"/><circle cx="19" cy="14" r="1.5"/></svg>
               </div>
               <h3 class="service-title">Flatbed</h3>
               <p class="service-desc">
@@ -150,7 +152,25 @@
         </div>
       </section>
 
-      <section id="contact" class="contact section">
+      <section id="gallery" class="gallery section section-reveal">
+        <div class="container">
+          <p class="section-label section-label-center">FLEET & FREIGHT</p>
+          <h2 class="section-title section-title-center">Gallery</h2>
+          <div class="gallery-grid">
+            <img src="images/truck-1.webp" alt="NEDispatch fleet – truck 1" width="400" height="300" loading="lazy" />
+            <img src="images/truck-2.webp" alt="NEDispatch fleet – truck 2" width="400" height="300" loading="lazy" />
+            <img src="images/truck-3.webp" alt="NEDispatch fleet – truck 3" width="400" height="300" loading="lazy" />
+            <img src="images/truck-4.webp" alt="NEDispatch fleet – truck 4" width="400" height="300" loading="lazy" />
+            <img src="images/truck-5.webp" alt="NEDispatch fleet – truck 5" width="400" height="300" loading="lazy" />
+            <img src="images/truck-6.jpeg" alt="NEDispatch fleet – truck 6" width="400" height="300" loading="lazy" />
+            <img src="images/truck-7.webp" alt="NEDispatch fleet – truck 7" width="400" height="300" loading="lazy" />
+            <img src="images/truck-8.webp" alt="NEDispatch fleet – truck 8" width="400" height="300" loading="lazy" />
+            <img src="images/truck-9.webp" alt="NEDispatch fleet – truck 9" width="400" height="300" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section section-reveal">
         <div class="container">
           <p class="section-label section-label-center">GET IN TOUCH</p>
           <h2 class="section-title section-title-center">Contact Us</h2>
@@ -208,10 +228,16 @@
         <nav class="footer-nav" aria-label="Footer navigation">
           <a href="#services">Services</a>
           <a href="#about">About</a>
+          <a href="#gallery">Gallery</a>
           <a href="#contact">Contact</a>
           <a href="#contact" class="footer-cta">Get a Quote</a>
         </nav>
       </div>
     </footer>
+    <a href="#main-content" class="back-to-top" aria-label="Back to top">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M18 15l-6-6-6 6"/>
+      </svg>
+    </a>
   </body>
 </html>
