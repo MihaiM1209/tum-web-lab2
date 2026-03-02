@@ -14,12 +14,27 @@
     <meta property="og:image" content="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1200" />
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1200" />
     <title>NEDispatch – Freight Dispatch Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'ned-bg': '#1a1a1a',
+              'ned-card': '#2b2b2b',
+              'ned-accent': '#3498db',
+              'ned-accent-dark': '#2980b9',
+            },
+          },
+        },
+      };
+    </script>
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
-  <body>
+  <body class="bg-ned-bg text-white min-h-screen flex flex-col">
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="site-header">
       <a href="#" class="logo">
