@@ -1048,6 +1048,10 @@ body.menu-open .mobile-menu {
   margin: 0 auto;
 }
 
+.contact-highlight {
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.7);
+}
+
 .contact-info {
   display: flex;
   flex-direction: column;

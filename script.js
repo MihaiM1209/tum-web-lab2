@@ -9,6 +9,7 @@
   const header = document.querySelector('.site-header');
   const backToTop = document.querySelector('.back-to-top');
   const stickyCta = document.querySelector('.sticky-cta');
+  const footer = document.querySelector('.site-footer');
   const sections = document.querySelectorAll('.section-reveal');
 
   function updateHeader() {
@@ -31,7 +32,16 @@
 
   function updateStickyCta() {
     if (!stickyCta) return;
-    if (window.scrollY > STICKY_CTA_THRESHOLD) {
+    const beyondThreshold = window.scrollY > STICKY_CTA_THRESHOLD;
+    let overlappingFooter = false;
+
+    if (footer) {
+      const footerTop = footer.offsetTop;
+      const viewportBottom = window.scrollY + window.innerHeight;
+      overlappingFooter = viewportBottom >= footerTop - 40;
+    }
+
+    if (beyondThreshold && !overlappingFooter) {
       stickyCta.classList.add('visible');
     } else {
       stickyCta.classList.remove('visible');
@@ -89,6 +99,28 @@
         form.reset();
       }, 1200);
     });
+  }
+
+  function scrollToContact() {
+    const contactSection = document.getElementById('contact');
+    if (!contactSection) return;
+
+    contactSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+
+    setTimeout(function () {
+      contactSection.classList.add('contact-highlight');
+      setTimeout(function () {
+        contactSection.classList.remove('contact-highlight');
+      }, 1500);
+
+      const firstField = document.querySelector('#contact-form input[name=\"name\"]');
+      if (firstField) {
+        firstField.focus();
+      }
+    }, 800);
   }
 
   function initNavDropdown() {
@@ -156,6 +188,16 @@
     });
   }
 
+  function initMascot() {
+    const mascot = document.querySelector('.mascot');
+    if (!mascot) return;
+
+    mascot.addEventListener('click', function (e) {
+      e.preventDefault();
+      scrollToContact();
+    });
+  }
+
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('load', function () {
     updateHeader();
@@ -165,5 +207,6 @@
     initContactForm();
     initNavDropdown();
     initMobileMenu();
+    initMascot();
   });
 })();
