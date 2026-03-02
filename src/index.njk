@@ -65,8 +65,8 @@
     </header>
     <div class="mobile-only-banner">
       <div class="container mobile-only-banner-inner">
-        <span class="mobile-only-label">On the road?</span>
-        <a href="tel:2312449894" class="mobile-only-phone">(231) 244-9894</a>
+        <span class="mobile-only-label">{{ site.mobileBanner.label }}</span>
+        <a href="{{ site.mobileBanner.phoneHref }}" class="mobile-only-phone">{{ site.mobileBanner.phoneLabel }}</a>
       </div>
     </div>
     <div class="mobile-menu-overlay" id="mobile-menu-overlay" aria-hidden="true"></div>
@@ -90,17 +90,16 @@
       <section id="home" class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content container hero-entrance">
-          <p class="hero-label">RELIABLE FREIGHT DISPATCH</p>
+          <p class="hero-label">{{ site.hero.label }}</p>
           <h1 class="hero-title">
-            Moving Your Freight <span class="accent">Forward</span>
+            {{ site.hero.title | replace("Forward", "") }}<span class="accent">Forward</span>
           </h1>
           <p class="hero-desc">
-            Professional dispatch services for reefer, dry van, flatbed, and car hauling.
-            We keep your loads moving — on time, every time.
+            {{ site.hero.description }}
           </p>
           <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary">Request a Quote →</a>
-            <a href="#services" class="btn btn-secondary">Our Services</a>
+            <a href="{{ site.hero.primaryCtaHref }}" class="btn btn-primary">{{ site.hero.primaryCtaText }}</a>
+            <a href="{{ site.hero.secondaryCtaHref }}" class="btn btn-secondary">{{ site.hero.secondaryCtaText }}</a>
           </div>
         </div>
       </section>
@@ -109,46 +108,28 @@
         <div class="container about-grid">
           <div class="about-content">
             <p class="section-label">ABOUT US</p>
-            <h2 class="section-title">Your Trusted Dispatch Partner</h2>
-            <p>
-              At Ned Dispatch, we specialize in connecting carriers with the right loads.
-              With years of experience in freight logistics, we understand what it takes to
-              keep goods moving efficiently across the country.
-            </p>
-            <p>
-              Whether you're hauling temperature-sensitive products in reefers, general cargo
-              in dry vans, vehicles on car haulers, or heavy equipment on flatbeds — we've
-              got the expertise and network to keep your trucks loaded and rolling.
-            </p>
+            <h2 class="section-title">{{ site.about.title }}</h2>
+            <p>{{ site.about.paragraph1 }}</p>
+            <p>{{ site.about.paragraph2 }}</p>
           </div>
           <div class="about-stats">
+            {% for stat in site.stats %}
             <article class="stat-card">
-              <div class="stat-icon" aria-hidden="true">
+              <div class="stat-icon{% if stat.icon == 'clock' %} stat-icon-clock{% elseif stat.icon == 'location' %} stat-icon-location{% endif %}" aria-hidden="true">
+                {% if stat.icon == 'shield' %}
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
-              <div class="stat-content">
-                <span class="stat-value">100%</span>
-                <span class="stat-label">Fully Insured</span>
-              </div>
-            </article>
-            <article class="stat-card">
-              <div class="stat-icon stat-icon-clock" aria-hidden="true">
+                {% elseif stat.icon == 'clock' %}
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-              </div>
-              <div class="stat-content">
-                <span class="stat-value">98%</span>
-                <span class="stat-label">On-Time Rate</span>
-              </div>
-            </article>
-            <article class="stat-card">
-              <div class="stat-icon stat-icon-location" aria-hidden="true">
+                {% elseif stat.icon == 'location' %}
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                {% endif %}
               </div>
               <div class="stat-content">
-                <span class="stat-value">48 States</span>
-                <span class="stat-label">Nationwide</span>
+                <span class="stat-value">{{ stat.value }}</span>
+                <span class="stat-label">{{ stat.label }}</span>
               </div>
             </article>
+            {% endfor %}
           </div>
         </div>
       </section>
@@ -158,46 +139,17 @@
           <p class="section-label section-label-center">WHAT WE HAUL</p>
           <h2 class="section-title section-title-center">Our Services</h2>
           <div class="services-grid">
-            <article id="service-reefer" class="service-card">
+            {% for service in site.services %}
+            <article id="{{ service.id }}" class="service-card">
               <div class="service-photo">
-                <img src="images/reefer.webp" alt="Reefer service" width="200" height="120" loading="lazy" />
+                <img src="{{ service.image }}" alt="{{ service.name }} service" width="200" height="120" loading="lazy" />
               </div>
-              <h3 class="service-title">Reefer</h3>
+              <h3 class="service-title">{{ service.name }}</h3>
               <p class="service-desc">
-                Temperature-controlled freight for perishables and sensitive cargo.
-                We handle the details so your loads stay on spec.
+                {{ service.description }}
               </p>
             </article>
-            <article id="service-dryvan" class="service-card">
-              <div class="service-photo">
-                <img src="images/dryvan.webp" alt="Dry van service" width="200" height="120" loading="lazy" />
-              </div>
-              <h3 class="service-title">Dry Van</h3>
-              <p class="service-desc">
-                General freight and palletized loads. Reliable dry van dispatch
-                with a network you can count on.
-              </p>
-            </article>
-            <article id="service-car" class="service-card">
-              <div class="service-photo">
-                <img src="images/carhauling.webp" alt="Car hauling service" width="200" height="120" loading="lazy" />
-              </div>
-              <h3 class="service-title">Car Hauling</h3>
-              <p class="service-desc">
-                Auto transport and vehicle logistics. From single units to multi-car
-                loads, we keep your haulers moving.
-              </p>
-            </article>
-            <article id="service-flatbed" class="service-card">
-              <div class="service-photo">
-                <img src="images/flatbed.webp" alt="Flatbed service" width="200" height="120" loading="lazy" />
-              </div>
-              <h3 class="service-title">Flatbed</h3>
-              <p class="service-desc">
-                Heavy equipment, machinery, and oversized loads. Flatbed expertise
-                and secure, on-time delivery.
-              </p>
-            </article>
+            {% endfor %}
           </div>
         </div>
       </section>
@@ -207,38 +159,29 @@
           <p class="section-label section-label-center">WHAT PEOPLE SAY</p>
           <h2 class="section-title section-title-center">Testimonials</h2>
           <div class="testimonials-grid">
+            {% for t in site.testimonials %}
             <blockquote class="testimonial-card">
-              <p class="testimonial-quote">NEDispatch keeps our trucks loaded. Professional, responsive, and they know the lanes. Couldn’t ask for a better partner.</p>
+              <p class="testimonial-quote">{{ t.quote }}</p>
               <footer class="testimonial-footer">
-                <span class="testimonial-avatar" aria-hidden="true">JM</span>
+                <span class="testimonial-avatar" aria-hidden="true">{{ t.initials }}</span>
                 <div>
-                  <cite class="testimonial-name">James M.</cite>
-                  <span class="testimonial-role">Owner-Operator, Reefer</span>
+                  <cite class="testimonial-name">{{ t.name }}</cite>
+                  <span class="testimonial-role">{{ t.role }}</span>
                 </div>
               </footer>
             </blockquote>
-            <blockquote class="testimonial-card">
-              <p class="testimonial-quote">We switched to NEDispatch last year and our on-time rate went up. They handle the details so we can focus on driving.</p>
-              <footer class="testimonial-footer">
-                <span class="testimonial-avatar" aria-hidden="true">SK</span>
-                <div>
-                  <cite class="testimonial-name">Sarah K.</cite>
-                  <span class="testimonial-role">Fleet Manager, Dry Van</span>
-                </div>
-              </footer>
-            </blockquote>
+            {% endfor %}
           </div>
         </div>
       </section>
 
       <section class="trust-strip section">
         <div class="container">
-          <p class="trust-strip-label">Proud to work with carriers and shippers nationwide</p>
+          <p class="trust-strip-label">{{ site.trust.label }}</p>
           <div class="trust-strip-logos" aria-hidden="true">
-            <span class="trust-logo">Carriers</span>
-            <span class="trust-logo">Shippers</span>
-            <span class="trust-logo">Brokers</span>
-            <span class="trust-logo">Insurers</span>
+            {% for label in site.trust.logos %}
+            <span class="trust-logo">{{ label }}</span>
+            {% endfor %}
           </div>
         </div>
       </section>
@@ -248,15 +191,11 @@
           <p class="section-label section-label-center">FLEET & FREIGHT</p>
           <h2 class="section-title section-title-center">Gallery</h2>
           <div class="gallery-grid">
-            <div class="gallery-item"><img src="images/truck-1.webp" alt="NEDispatch fleet – truck 1" width="400" height="300" loading="lazy" /></div>
-            <div class="gallery-item"><img src="images/truck-2.webp" alt="NEDispatch fleet – truck 2" width="400" height="300" loading="lazy" /></div>
-            <div class="gallery-item"><img src="images/truck-3.webp" alt="NEDispatch fleet – truck 3" width="400" height="300" loading="lazy" /></div>
-            <div class="gallery-item"><img src="images/truck-4.webp" alt="NEDispatch fleet – truck 4" width="400" height="300" loading="lazy" /></div>
-            <div class="gallery-item"><img src="images/truck-5.webp" alt="NEDispatch fleet – truck 5" width="400" height="300" loading="lazy" /></div>
-            <div class="gallery-item"><img src="images/truck-6.jpeg" alt="NEDispatch fleet – truck 6" width="400" height="300" loading="lazy" /></div>
-            <div class="gallery-item"><img src="images/truck-7.webp" alt="NEDispatch fleet – truck 7" width="400" height="300" loading="lazy" /></div>
-            <div class="gallery-item"><img src="images/truck-8.webp" alt="NEDispatch fleet – truck 8" width="400" height="300" loading="lazy" /></div>
-            <div class="gallery-item"><img src="images/truck-9.webp" alt="NEDispatch fleet – truck 9" width="400" height="300" loading="lazy" /></div>
+            {% for image in site.gallery %}
+            <div class="gallery-item">
+              <img src="{{ image }}" alt="NEDispatch fleet" width="400" height="300" loading="lazy" />
+            </div>
+            {% endfor %}
           </div>
         </div>
       </section>
@@ -266,22 +205,12 @@
           <p class="section-label section-label-center">GOT QUESTIONS?</p>
           <h2 class="section-title section-title-center">FAQ</h2>
           <div class="faq-list">
+            {% for item in site.faq %}
             <details class="faq-item">
-              <summary>How do I get a quote?</summary>
-              <p>Fill out the contact form below or call us. We’ll get back with rates and options based on your lane, equipment, and timeline.</p>
+              <summary>{{ item.question }}</summary>
+              <p>{{ item.answer }}</p>
             </details>
-            <details class="faq-item">
-              <summary>What areas do you cover?</summary>
-              <p>We dispatch loads across all 48 continental US states. Tell us your preferred lanes and we’ll match you with available freight.</p>
-            </details>
-            <details class="faq-item">
-              <summary>What equipment do you dispatch?</summary>
-              <p>Reefer, dry van, flatbed, and car hauling. We work with owner-operators and small fleets in each category.</p>
-            </details>
-            <details class="faq-item">
-              <summary>How quickly can you find me a load?</summary>
-              <p>Often same day for common lanes. We’ll confirm availability and get you loaded as soon as you’re ready.</p>
-            </details>
+            {% endfor %}
           </div>
         </div>
       </section>
@@ -298,7 +227,7 @@
                 </div>
                 <div>
                   <h3 class="contact-item-title">Phone</h3>
-                  <p class="contact-item-text">(231) 244-9894</p>
+                  <p class="contact-item-text">{{ site.contact.phone }}</p>
                 </div>
               </div>
               <div class="contact-item">
@@ -307,7 +236,7 @@
                 </div>
                 <div>
                   <h3 class="contact-item-title">Email</h3>
-                  <p class="contact-item-text">neddispatchsrl@gmail.com</p>
+                  <p class="contact-item-text">{{ site.contact.email }}</p>
                 </div>
               </div>
               <div class="contact-item">
@@ -316,7 +245,7 @@
                 </div>
                 <div>
                   <h3 class="contact-item-title">Location</h3>
-                  <p class="contact-item-text">Serving all 48 continental states</p>
+                  <p class="contact-item-text">{{ site.contact.location }}</p>
                 </div>
               </div>
             </div>
@@ -341,8 +270,8 @@
 
       <section class="cta-strip section">
         <div class="container cta-strip-inner">
-          <h2 class="cta-strip-title">Ready to move your freight?</h2>
-          <a href="#contact" class="btn btn-primary btn-cta-strip">Get a Quote</a>
+          <h2 class="cta-strip-title">{{ site.ctaStrip.title }}</h2>
+          <a href="{{ site.ctaStrip.buttonHref }}" class="btn btn-primary btn-cta-strip">{{ site.ctaStrip.buttonText }}</a>
         </div>
       </section>
     </main>
@@ -362,7 +291,7 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p class="footer-copy">&copy; 2025 Ned Dispatch. All rights reserved.</p>
+        <p class="footer-copy">&copy; {{ site.footer.year }} {{ site.footer.company }}. All rights reserved.</p>
         <nav class="footer-nav" aria-label="Footer navigation">
           <a href="#services">Services</a>
           <a href="#about">About</a>
@@ -374,8 +303,9 @@
     </footer>
     <a href="#main-content" class="back-to-top" aria-label="Back to top">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <path d="M18 15l-6-6-6 6"/>
+        <path d="M18 15l-6-6-6 6" />
       </svg>
     </a>
   </body>
 </html>
+

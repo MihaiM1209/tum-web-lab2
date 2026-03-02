@@ -1,0 +1,117 @@
+local_backend: true
+
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - label: "Site Content"
+    name: "site"
+    files:
+      - label: "Landing Page Content"
+        name: "landing"
+        file: "src/_data/site.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Primary CTA Text", name: "primaryCtaText", widget: "string" }
+              - { label: "Primary CTA Href", name: "primaryCtaHref", widget: "string" }
+              - { label: "Secondary CTA Text", name: "secondaryCtaText", widget: "string" }
+              - { label: "Secondary CTA Href", name: "secondaryCtaHref", widget: "string" }
+
+          - label: "Mobile Banner"
+            name: "mobileBanner"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Phone Label", name: "phoneLabel", widget: "string" }
+              - { label: "Phone Href", name: "phoneHref", widget: "string" }
+
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Paragraph 1", name: "paragraph1", widget: "text" }
+              - { label: "Paragraph 2", name: "paragraph2", widget: "text" }
+
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Value", name: "value", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Icon (shield/clock/location)", name: "icon", widget: "string" }
+
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Description", name: "description", widget: "text" }
+
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - { label: "Initials", name: "initials", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Quote", name: "quote", widget: "text" }
+
+          - label: "Trust Strip"
+            name: "trust"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - label: "Logos"
+                name: "logos"
+                widget: "list"
+                field: { label: "Logo Label", name: "logo", widget: "string" }
+
+          - label: "Gallery"
+            name: "gallery"
+            widget: "list"
+            field: { label: "Image Path", name: "image", widget: "image" }
+
+          - label: "FAQ"
+            name: "faq"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text" }
+
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Phone Href", name: "phoneHref", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+
+          - label: "CTA Strip"
+            name: "ctaStrip"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Href", name: "buttonHref", widget: "string" }
+
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Year", name: "year", widget: "number" }
+              - { label: "Company", name: "company", widget: "string" }
+
