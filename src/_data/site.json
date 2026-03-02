@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "label": "RELIABLE FREIGHT DISPATCH",
+    "title": "Moving Your Freight Forward",
+    "description": "Professional dispatch services for reefer, dry van, flatbed, and car hauling. We keep your loads moving — on time, every time.",
+    "primaryCtaText": "Request a Quote \u2192",
+    "primaryCtaHref": "#contact",
+    "secondaryCtaText": "Our Services",
+    "secondaryCtaHref": "#services"
+  },
+  "mobileBanner": {
+    "label": "On the road?",
+    "phoneLabel": "(231) 244-9894",
+    "phoneHref": "tel:2312449894"
+  },
+  "about": {
+    "title": "Your Trusted Dispatch Partner",
+    "paragraph1": "At Ned Dispatch, we specialize in connecting carriers with the right loads. With years of experience in freight logistics, we understand what it takes to keep goods moving efficiently across the country.",
+    "paragraph2": "Whether you're hauling temperature-sensitive products in reefers, general cargo in dry vans, vehicles on car haulers, or heavy equipment on flatbeds — we've got the expertise and network to keep your trucks loaded and rolling."
+  },
+  "stats": [
+    { "value": "100%", "label": "Fully Insured", "icon": "shield" },
+    { "value": "98%", "label": "On-Time Rate", "icon": "clock" },
+    { "value": "48 States", "label": "Nationwide", "icon": "location" }
+  ],
+  "services": [
+    {
+      "id": "service-reefer",
+      "name": "Reefer",
+      "image": "images/reefer.webp",
+      "description": "Temperature-controlled freight for perishables and sensitive cargo. We handle the details so your loads stay on spec."
+    },
+    {
+      "id": "service-dryvan",
+      "name": "Dry Van",
+      "image": "images/dryvan.webp",
+      "description": "General freight and palletized loads. Reliable dry van dispatch with a network you can count on."
+    },
+    {
+      "id": "service-car",
+      "name": "Car Hauling",
+      "image": "images/carhauling.webp",
+      "description": "Auto transport and vehicle logistics. From single units to multi-car loads, we keep your haulers moving."
+    },
+    {
+      "id": "service-flatbed",
+      "name": "Flatbed",
+      "image": "images/flatbed.webp",
+      "description": "Heavy equipment, machinery, and oversized loads. Flatbed expertise and secure, on-time delivery."
+    }
+  ],
+  "testimonials": [
+    {
+      "initials": "JM",
+      "name": "James M.",
+      "role": "Owner-Operator, Reefer",
+      "quote": "NEDispatch keeps our trucks loaded. Professional, responsive, and they know the lanes. Couldn\u2019t ask for a better partner."
+    },
+    {
+      "initials": "SK",
+      "name": "Sarah K.",
+      "role": "Fleet Manager, Dry Van",
+      "quote": "We switched to NEDispatch last year and our on-time rate went up. They handle the details so we can focus on driving."
+    }
+  ],
+  "trust": {
+    "label": "Proud to work with carriers and shippers nationwide",
+    "logos": ["Carriers", "Shippers", "Brokers", "Insurers"]
+  },
+  "gallery": [
+    "images/truck-1.webp",
+    "images/truck-2.webp",
+    "images/truck-3.webp",
+    "images/truck-4.webp",
+    "images/truck-5.webp",
+    "images/truck-6.jpeg",
+    "images/truck-7.webp",
+    "images/truck-8.webp",
+    "images/truck-9.webp"
+  ],
+  "faq": [
+    {
+      "question": "How do I get a quote?",
+      "answer": "Fill out the contact form below or call us. We\u2019ll get back with rates and options based on your lane, equipment, and timeline."
+    },
+    {
+      "question": "What areas do you cover?",
+      "answer": "We dispatch loads across all 48 continental US states. Tell us your preferred lanes and we\u2019ll match you with available freight."
+    },
+    {
+      "question": "What equipment do you dispatch?",
+      "answer": "Reefer, dry van, flatbed, and car hauling. We work with owner-operators and small fleets in each category."
+    },
+    {
+      "question": "How quickly can you find me a load?",
+      "answer": "Often same day for common lanes. We\u2019ll confirm availability and get you loaded as soon as you\u2019re ready."
+    }
+  ],
+  "contact": {
+    "phone": "(231) 244-9894",
+    "phoneHref": "tel:2312449894",
+    "email": "neddispatchsrl@gmail.com",
+    "location": "Serving all 48 continental states"
+  },
+  "ctaStrip": {
+    "title": "Ready to move your freight?",
+    "buttonText": "Get a Quote",
+    "buttonHref": "#contact"
+  },
+  "footer": {
+    "year": 2025,
+    "company": "Ned Dispatch"
+  }
+}
+
