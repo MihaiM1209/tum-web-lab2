@@ -48,9 +48,15 @@
         <span class="menu-toggle-bar"></span>
       </button>
     </header>
+    <div class="mobile-only-banner">
+      <div class="container mobile-only-banner-inner">
+        <span class="mobile-only-label">On the road?</span>
+        <a href="tel:5551234567" class="mobile-only-phone">Tap to call dispatch</a>
+      </div>
+    </div>
     <div class="mobile-menu-overlay" id="mobile-menu-overlay" aria-hidden="true"></div>
     <div class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
-      <nav class="mobile-nav">
+      <nav class="mobile-nav" aria-label="Mobile primary navigation">
         <a href="#home" class="mobile-nav-link">Home</a>
         <a href="#services" class="mobile-nav-link">Services</a>
         <a href="#service-reefer" class="mobile-nav-sublink">Reefer</a>
@@ -329,6 +335,15 @@
     <div id="sticky-cta" class="sticky-cta" aria-hidden="true">
       <a href="#contact" class="btn btn-primary">Get a Quote</a>
     </div>
+
+    <button type="button" class="mascot" aria-label="NEDi, your dispatch buddy">
+      <div class="mascot-body" aria-hidden="true">
+        <img src="images/footer.webp" alt="" class="mascot-image" loading="lazy" />
+      </div>
+      <div class="mascot-bubble">
+        <p>Hi, I&apos;m NEDi – ready to keep your loads moving. Need a quote?</p>
+      </div>
+    </button>
 
     <footer class="site-footer">
       <div class="container footer-inner">
