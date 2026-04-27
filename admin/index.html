@@ -10,6 +10,46 @@
     />
   </head>
   <body>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        var queryParams = new URLSearchParams(window.location.search || "");
+        var hashParams = new URLSearchParams((window.location.hash || "").replace(/^#/, ""));
+
+        function hasToken(name) {
+          return Boolean(queryParams.get(name) || hashParams.get(name));
+        }
+
+        var hasInviteToken = hasToken("invite_token");
+        var hasRecoveryToken = hasToken("recovery_token");
+        var hasConfirmationToken = hasToken("confirmation_token");
+
+        window.netlifyIdentity.init();
+
+        window.netlifyIdentity.on("init", function (user) {
+          if (hasInviteToken) {
+            window.netlifyIdentity.open("signup");
+            return;
+          }
+
+          if (hasRecoveryToken) {
+            window.netlifyIdentity.open("recovery");
+            return;
+          }
+
+          if (hasConfirmationToken) {
+            window.netlifyIdentity.open("login");
+            return;
+          }
+
+          if (!user) {
+            window.netlifyIdentity.on("login", function () {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </body>
 </html>

@@ -3,17 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Ned Dispatch – Professional freight dispatch for reefer, dry van, flatbed, and car hauling. Nationwide coverage, on-time every time." />
-    <meta property="og:title" content="NEDispatch – Freight Dispatch Services" />
-    <meta property="og:description" content="Professional freight dispatch for reefer, dry van, flatbed, and car hauling. Nationwide coverage, on-time every time." />
+    <meta name="description" content="{{ site.seo.description }}" />
+    <meta property="og:title" content="{{ site.seo.ogTitle }}" />
+    <meta property="og:description" content="{{ site.seo.ogDescription }}" />
     <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="NEDispatch – Freight Dispatch Services" />
-    <meta name="twitter:description" content="Professional freight dispatch for reefer, dry van, flatbed, and car hauling. Nationwide coverage, on-time every time." />
-    <!-- Replace with your own hero/share image when ready -->
-    <meta property="og:image" content="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1200" />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1200" />
-    <title>NEDispatch – Freight Dispatch Services</title>
+    <meta name="twitter:card" content="{{ site.seo.twitterCard }}" />
+    <meta name="twitter:title" content="{{ site.seo.twitterTitle }}" />
+    <meta name="twitter:description" content="{{ site.seo.twitterDescription }}" />
+    <meta property="og:image" content="{{ site.seo.ogImage }}" />
+    <meta name="twitter:image" content="{{ site.seo.twitterImage }}" />
+    <title>{{ site.seo.title }}</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -29,7 +28,7 @@
         },
       };
     </script>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="{{ site.brand.favicon }}" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
@@ -38,25 +37,24 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="site-header">
       <a href="#" class="logo">
-        <span class="logo-text"><span class="logo-ned">NED</span><span class="logo-ispatch">ispatch</span></span>
+        <span class="logo-text"><span class="logo-ned">{{ site.brand.logoPrefix }}</span><span class="logo-ispatch">{{ site.brand.logoSuffix }}</span></span>
       </a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="#home">Home</a>
+      <nav class="main-nav" aria-label="{{ site.navigation.ariaLabel }}">
+        <a href="#home">{{ site.navigation.home }}</a>
         <div class="nav-dropdown">
-          <a href="#services" class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false" id="services-menu">Services</a>
+          <a href="#services" class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false" id="services-menu">{{ site.navigation.services }}</a>
           <ul class="nav-dropdown-menu" aria-labelledby="services-menu">
-            <li><a href="#service-reefer">Reefer</a></li>
-            <li><a href="#service-dryvan">Dry Van</a></li>
-            <li><a href="#service-car">Car Hauling</a></li>
-            <li><a href="#service-flatbed">Flatbed</a></li>
+            {% for service in site.services %}
+            <li><a href="#{{ service.id }}">{{ service.name }}</a></li>
+            {% endfor %}
           </ul>
         </div>
-        <a href="#about">About</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">{{ site.navigation.about }}</a>
+        <a href="#gallery">{{ site.navigation.gallery }}</a>
+        <a href="#faq">{{ site.navigation.faq }}</a>
+        <a href="#contact">{{ site.navigation.contact }}</a>
       </nav>
-      <a href="#contact" class="btn btn-cta header-cta">Get a Quote</a>
+      <a href="{{ site.stickyCta.href }}" class="btn btn-cta header-cta">{{ site.navigation.quote }}</a>
       <button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" id="menu-toggle-btn">
         <span class="menu-toggle-bar"></span>
         <span class="menu-toggle-bar"></span>
@@ -71,18 +69,17 @@
     </div>
     <div class="mobile-menu-overlay" id="mobile-menu-overlay" aria-hidden="true"></div>
     <div class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
-      <nav class="mobile-nav" aria-label="Mobile primary navigation">
-        <a href="#home" class="mobile-nav-link">Home</a>
-        <a href="#services" class="mobile-nav-link">Services</a>
-        <a href="#service-reefer" class="mobile-nav-sublink">Reefer</a>
-        <a href="#service-dryvan" class="mobile-nav-sublink">Dry Van</a>
-        <a href="#service-car" class="mobile-nav-sublink">Car Hauling</a>
-        <a href="#service-flatbed" class="mobile-nav-sublink">Flatbed</a>
-        <a href="#about" class="mobile-nav-link">About</a>
-        <a href="#gallery" class="mobile-nav-link">Gallery</a>
-        <a href="#faq" class="mobile-nav-link">FAQ</a>
-        <a href="#contact" class="mobile-nav-link">Contact</a>
-        <a href="#contact" class="btn btn-primary mobile-menu-cta">Get a Quote</a>
+      <nav class="mobile-nav" aria-label="{{ site.navigation.mobileAriaLabel }}">
+        <a href="#home" class="mobile-nav-link">{{ site.navigation.home }}</a>
+        <a href="#services" class="mobile-nav-link">{{ site.navigation.services }}</a>
+        {% for service in site.services %}
+        <a href="#{{ service.id }}" class="mobile-nav-sublink">{{ service.name }}</a>
+        {% endfor %}
+        <a href="#about" class="mobile-nav-link">{{ site.navigation.about }}</a>
+        <a href="#gallery" class="mobile-nav-link">{{ site.navigation.gallery }}</a>
+        <a href="#faq" class="mobile-nav-link">{{ site.navigation.faq }}</a>
+        <a href="#contact" class="mobile-nav-link">{{ site.navigation.contact }}</a>
+        <a href="{{ site.stickyCta.href }}" class="btn btn-primary mobile-menu-cta">{{ site.navigation.quote }}</a>
       </nav>
     </div>
 
@@ -107,7 +104,7 @@
       <section id="about" class="about section section-reveal">
         <div class="container about-grid">
           <div class="about-content">
-            <p class="section-label">ABOUT US</p>
+            <p class="section-label">{{ site.sections.aboutLabel }}</p>
             <h2 class="section-title">{{ site.about.title }}</h2>
             <p>{{ site.about.paragraph1 }}</p>
             <p>{{ site.about.paragraph2 }}</p>
@@ -136,8 +133,8 @@
 
       <section id="services" class="services section section-reveal">
         <div class="container">
-          <p class="section-label section-label-center">WHAT WE HAUL</p>
-          <h2 class="section-title section-title-center">Our Services</h2>
+          <p class="section-label section-label-center">{{ site.sections.servicesLabel }}</p>
+          <h2 class="section-title section-title-center">{{ site.sections.servicesTitle }}</h2>
           <div class="services-grid">
             {% for service in site.services %}
             <article id="{{ service.id }}" class="service-card">
@@ -156,8 +153,8 @@
 
       <section id="testimonials" class="testimonials section section-reveal">
         <div class="container">
-          <p class="section-label section-label-center">WHAT PEOPLE SAY</p>
-          <h2 class="section-title section-title-center">Testimonials</h2>
+          <p class="section-label section-label-center">{{ site.sections.testimonialsLabel }}</p>
+          <h2 class="section-title section-title-center">{{ site.sections.testimonialsTitle }}</h2>
           <div class="testimonials-grid">
             {% for t in site.testimonials %}
             <blockquote class="testimonial-card">
@@ -188,8 +185,8 @@
 
       <section id="gallery" class="gallery section section-reveal">
         <div class="container">
-          <p class="section-label section-label-center">FLEET & FREIGHT</p>
-          <h2 class="section-title section-title-center">Gallery</h2>
+          <p class="section-label section-label-center">{{ site.sections.galleryLabel }}</p>
+          <h2 class="section-title section-title-center">{{ site.sections.galleryTitle }}</h2>
           <div class="gallery-grid">
             {% for image in site.gallery %}
             <div class="gallery-item">
@@ -202,8 +199,8 @@
 
       <section id="faq" class="faq section section-reveal">
         <div class="container faq-container">
-          <p class="section-label section-label-center">GOT QUESTIONS?</p>
-          <h2 class="section-title section-title-center">FAQ</h2>
+          <p class="section-label section-label-center">{{ site.sections.faqLabel }}</p>
+          <h2 class="section-title section-title-center">{{ site.sections.faqTitle }}</h2>
           <div class="faq-list">
             {% for item in site.faq %}
             <details class="faq-item">
@@ -217,8 +214,8 @@
 
       <section id="contact" class="contact section section-reveal">
         <div class="container">
-          <p class="section-label section-label-center">GET IN TOUCH</p>
-          <h2 class="section-title section-title-center">Contact Us</h2>
+          <p class="section-label section-label-center">{{ site.sections.contactLabel }}</p>
+          <h2 class="section-title section-title-center">{{ site.sections.contactTitle }}</h2>
           <div class="contact-grid">
             <div class="contact-info">
               <div class="contact-item">
@@ -226,8 +223,8 @@
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 </div>
                 <div>
-                  <h3 class="contact-item-title">Phone</h3>
-                  <p class="contact-item-text">{{ site.contact.phone }}</p>
+                  <h3 class="contact-item-title">{{ site.contactCard.phoneTitle }}</h3>
+                  <p class="contact-item-text"><a href="{{ site.contact.phoneHref }}">{{ site.contact.phone }}</a></p>
                 </div>
               </div>
               <div class="contact-item">
@@ -235,7 +232,7 @@
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
                 </div>
                 <div>
-                  <h3 class="contact-item-title">Email</h3>
+                  <h3 class="contact-item-title">{{ site.contactCard.emailTitle }}</h3>
                   <p class="contact-item-text">{{ site.contact.email }}</p>
                 </div>
               </div>
@@ -244,21 +241,21 @@
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 </div>
                 <div>
-                  <h3 class="contact-item-title">Location</h3>
+                  <h3 class="contact-item-title">{{ site.contactCard.locationTitle }}</h3>
                   <p class="contact-item-text">{{ site.contact.location }}</p>
                 </div>
               </div>
             </div>
             <form id="contact-form" class="contact-form" action="#" method="post">
               <div class="form-row">
-                <input type="text" name="name" placeholder="Your Name" required />
-                <input type="email" name="email" placeholder="Email Address" required />
+                <input type="text" name="name" placeholder="{{ site.contactForm.namePlaceholder }}" required />
+                <input type="email" name="email" placeholder="{{ site.contactForm.emailPlaceholder }}" required />
               </div>
-              <input type="tel" name="phone" placeholder="Phone Number" />
-              <textarea name="message" rows="4" placeholder="Tell us about your freight needs..."></textarea>
+              <input type="tel" name="phone" placeholder="{{ site.contactForm.phonePlaceholder }}" />
+              <textarea name="message" rows="4" placeholder="{{ site.contactForm.messagePlaceholder }}"></textarea>
               <p id="form-message" class="form-message" aria-live="polite" hidden></p>
               <button type="submit" id="form-submit" class="btn btn-primary btn-submit">
-                <span class="btn-text">Send Message</span>
+                <span class="btn-text">{{ site.contactForm.submitText }}</span>
                 <span class="btn-icon" aria-hidden="true">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
                 </span>
@@ -277,27 +274,27 @@
     </main>
 
     <div id="sticky-cta" class="sticky-cta" aria-hidden="true">
-      <a href="#contact" class="btn btn-primary">Get a Quote</a>
+      <a href="{{ site.stickyCta.href }}" class="btn btn-primary">{{ site.stickyCta.text }}</a>
     </div>
 
-    <a href="#contact" class="mascot" aria-label="NEDi, your dispatch buddy">
+    <a href="{{ site.stickyCta.href }}" class="mascot" aria-label="{{ site.mascot.ariaLabel }}">
       <div class="mascot-body" aria-hidden="true">
         <img src="images/footer.webp" alt="" class="mascot-image" loading="lazy" />
       </div>
       <div class="mascot-bubble">
-        <p>Hi, I&apos;m NEDi – ready to keep your loads moving. Need a quote?</p>
+        <p>{{ site.mascot.message }}</p>
       </div>
     </a>
 
     <footer class="site-footer">
       <div class="container footer-inner">
         <p class="footer-copy">&copy; {{ site.footer.year }} {{ site.footer.company }}. All rights reserved.</p>
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="#services">Services</a>
-          <a href="#about">About</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
+        <nav class="footer-nav" aria-label="{{ site.navigation.footerAriaLabel }}">
+          <a href="#services">{{ site.navigation.services }}</a>
+          <a href="#about">{{ site.navigation.about }}</a>
+          <a href="#gallery">{{ site.navigation.gallery }}</a>
+          <a href="#faq">{{ site.navigation.faq }}</a>
+          <a href="#contact">{{ site.navigation.contact }}</a>
         </nav>
       </div>
     </footer>
@@ -306,6 +303,50 @@
         <path d="M18 15l-6-6-6 6" />
       </svg>
     </a>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      (function () {
+        if (!window.netlifyIdentity) {
+          return;
+        }
+
+        var queryParams = new URLSearchParams(window.location.search || "");
+        var hashParams = new URLSearchParams((window.location.hash || "").replace(/^#/, ""));
+
+        function hasToken(name) {
+          return Boolean(queryParams.get(name) || hashParams.get(name));
+        }
+
+        var hasInviteToken = hasToken("invite_token");
+        var hasRecoveryToken = hasToken("recovery_token");
+        var hasConfirmationToken = hasToken("confirmation_token");
+        var hasAccessToken = hasToken("access_token");
+        var hasIdentityToken = hasInviteToken || hasRecoveryToken || hasConfirmationToken || hasAccessToken;
+
+        if (hasIdentityToken && window.location.pathname.indexOf("/admin") !== 0) {
+          window.location.replace("/admin/" + (window.location.search || "") + (window.location.hash || ""));
+          return;
+        }
+
+        window.netlifyIdentity.init();
+
+        window.netlifyIdentity.on("init", function () {
+          if (hasInviteToken) {
+            window.netlifyIdentity.open("signup");
+            return;
+          }
+
+          if (hasRecoveryToken) {
+            window.netlifyIdentity.open("recovery");
+            return;
+          }
+
+          if (hasConfirmationToken) {
+            window.netlifyIdentity.open("login");
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
 

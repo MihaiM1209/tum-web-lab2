@@ -1,4 +1,65 @@
 {
+  "seo": {
+    "title": "NEDispatch - Freight Dispatch Services",
+    "description": "Ned Dispatch - Professional freight dispatch for reefer, dry van, flatbed, and car hauling. Nationwide coverage, on-time every time.",
+    "ogTitle": "NEDispatch - Freight Dispatch Services",
+    "ogDescription": "Professional freight dispatch for reefer, dry van, flatbed, and car hauling. Nationwide coverage, on-time every time.",
+    "ogImage": "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1200",
+    "twitterCard": "summary",
+    "twitterTitle": "NEDispatch - Freight Dispatch Services",
+    "twitterDescription": "Professional freight dispatch for reefer, dry van, flatbed, and car hauling. Nationwide coverage, on-time every time.",
+    "twitterImage": "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1200"
+  },
+  "brand": {
+    "logoPrefix": "NED",
+    "logoSuffix": "ispatch",
+    "favicon": "favicon.svg"
+  },
+  "navigation": {
+    "ariaLabel": "Main navigation",
+    "mobileAriaLabel": "Mobile primary navigation",
+    "footerAriaLabel": "Footer navigation",
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "gallery": "Gallery",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "quote": "Get a Quote"
+  },
+  "sections": {
+    "aboutLabel": "ABOUT US",
+    "servicesLabel": "WHAT WE HAUL",
+    "servicesTitle": "Our Services",
+    "testimonialsLabel": "WHAT PEOPLE SAY",
+    "testimonialsTitle": "Testimonials",
+    "galleryLabel": "FLEET & FREIGHT",
+    "galleryTitle": "Gallery",
+    "faqLabel": "GOT QUESTIONS?",
+    "faqTitle": "FAQ",
+    "contactLabel": "GET IN TOUCH",
+    "contactTitle": "Contact Us"
+  },
+  "contactCard": {
+    "phoneTitle": "Phone",
+    "emailTitle": "Email",
+    "locationTitle": "Location"
+  },
+  "contactForm": {
+    "namePlaceholder": "Your Name",
+    "emailPlaceholder": "Email Address",
+    "phonePlaceholder": "Phone Number",
+    "messagePlaceholder": "Tell us about your freight needs...",
+    "submitText": "Send Message"
+  },
+  "mascot": {
+    "ariaLabel": "NEDi, your dispatch buddy",
+    "message": "Hi, I'm NEDi - ready to keep your loads moving. Need a quote?"
+  },
+  "stickyCta": {
+    "text": "Get a Quote",
+    "href": "#contact"
+  },
   "hero": {
     "label": "RELIABLE FREIGHT DISPATCH",
     "title": "Moving Your Freight Forward",

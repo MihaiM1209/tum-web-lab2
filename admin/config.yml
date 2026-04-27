@@ -2,7 +2,7 @@ local_backend: true
 
 backend:
   name: git-gateway
-  branch: master
+  branch: lab4
 
 media_folder: "images"
 public_folder: "/images"
@@ -15,6 +15,91 @@ collections:
         name: "landing"
         file: "src/_data/site.json"
         fields:
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "OG Title", name: "ogTitle", widget: "string" }
+              - { label: "OG Description", name: "ogDescription", widget: "text" }
+              - { label: "OG Image URL", name: "ogImage", widget: "string" }
+              - { label: "Twitter Card", name: "twitterCard", widget: "string" }
+              - { label: "Twitter Title", name: "twitterTitle", widget: "string" }
+              - { label: "Twitter Description", name: "twitterDescription", widget: "text" }
+              - { label: "Twitter Image URL", name: "twitterImage", widget: "string" }
+
+          - label: "Brand"
+            name: "brand"
+            widget: "object"
+            fields:
+              - { label: "Logo Prefix", name: "logoPrefix", widget: "string" }
+              - { label: "Logo Suffix", name: "logoSuffix", widget: "string" }
+              - { label: "Favicon Path", name: "favicon", widget: "string" }
+
+          - label: "Navigation"
+            name: "navigation"
+            widget: "object"
+            fields:
+              - { label: "Main Nav Aria Label", name: "ariaLabel", widget: "string" }
+              - { label: "Mobile Nav Aria Label", name: "mobileAriaLabel", widget: "string" }
+              - { label: "Footer Nav Aria Label", name: "footerAriaLabel", widget: "string" }
+              - { label: "Home", name: "home", widget: "string" }
+              - { label: "Services", name: "services", widget: "string" }
+              - { label: "About", name: "about", widget: "string" }
+              - { label: "Gallery", name: "gallery", widget: "string" }
+              - { label: "FAQ", name: "faq", widget: "string" }
+              - { label: "Contact", name: "contact", widget: "string" }
+              - { label: "Quote CTA", name: "quote", widget: "string" }
+
+          - label: "Section Labels"
+            name: "sections"
+            widget: "object"
+            fields:
+              - { label: "About Label", name: "aboutLabel", widget: "string" }
+              - { label: "Services Label", name: "servicesLabel", widget: "string" }
+              - { label: "Services Title", name: "servicesTitle", widget: "string" }
+              - { label: "Testimonials Label", name: "testimonialsLabel", widget: "string" }
+              - { label: "Testimonials Title", name: "testimonialsTitle", widget: "string" }
+              - { label: "Gallery Label", name: "galleryLabel", widget: "string" }
+              - { label: "Gallery Title", name: "galleryTitle", widget: "string" }
+              - { label: "FAQ Label", name: "faqLabel", widget: "string" }
+              - { label: "FAQ Title", name: "faqTitle", widget: "string" }
+              - { label: "Contact Label", name: "contactLabel", widget: "string" }
+              - { label: "Contact Title", name: "contactTitle", widget: "string" }
+
+          - label: "Contact Card Labels"
+            name: "contactCard"
+            widget: "object"
+            fields:
+              - { label: "Phone Title", name: "phoneTitle", widget: "string" }
+              - { label: "Email Title", name: "emailTitle", widget: "string" }
+              - { label: "Location Title", name: "locationTitle", widget: "string" }
+
+          - label: "Contact Form"
+            name: "contactForm"
+            widget: "object"
+            fields:
+              - { label: "Name Placeholder", name: "namePlaceholder", widget: "string" }
+              - { label: "Email Placeholder", name: "emailPlaceholder", widget: "string" }
+              - { label: "Phone Placeholder", name: "phonePlaceholder", widget: "string" }
+              - { label: "Message Placeholder", name: "messagePlaceholder", widget: "string" }
+              - { label: "Submit Text", name: "submitText", widget: "string" }
+
+          - label: "Mascot"
+            name: "mascot"
+            widget: "object"
+            fields:
+              - { label: "Aria Label", name: "ariaLabel", widget: "string" }
+              - { label: "Bubble Message", name: "message", widget: "text" }
+
+          - label: "Sticky CTA"
+            name: "stickyCta"
+            widget: "object"
+            fields:
+              - { label: "Button Text", name: "text", widget: "string" }
+              - { label: "Button Href", name: "href", widget: "string" }
+
           - label: "Hero"
             name: "hero"
             widget: "object"
