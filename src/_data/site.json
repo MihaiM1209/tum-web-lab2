@@ -27,6 +27,21 @@
     "contact": "Contact",
     "quote": "Get a Quote"
   },
+  "visibleSections": [
+    "hero",
+    "mobileBanner",
+    "about",
+    "services",
+    "testimonials",
+    "trust",
+    "gallery",
+    "faq",
+    "contact",
+    "ctaStrip",
+    "stickyCta",
+    "mascot",
+    "footer"
+  ],
   "sections": {
     "aboutLabel": "ABOUT US",
     "servicesLabel": "WHAT WE HAUL",

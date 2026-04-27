@@ -52,6 +52,29 @@ collections:
               - { label: "Contact", name: "contact", widget: "string" }
               - { label: "Quote CTA", name: "quote", widget: "string" }
 
+          - label: "Visible Sections"
+            name: "visibleSections"
+            widget: "list"
+            hint: "Delete an item to hide a section. Add it back to show the section again."
+            field:
+              label: "Section"
+              name: "section"
+              widget: "select"
+              options:
+                - "hero"
+                - "mobileBanner"
+                - "about"
+                - "services"
+                - "testimonials"
+                - "trust"
+                - "gallery"
+                - "faq"
+                - "contact"
+                - "ctaStrip"
+                - "stickyCta"
+                - "mascot"
+                - "footer"
+
           - label: "Section Labels"
             name: "sections"
             widget: "object"
