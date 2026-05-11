@@ -1,31 +1,9 @@
 {
-  "seo": {
-    "title": "NEDispatch - Freight Dispatch Services",
-    "description": "Ned Dispatch - Professional freight dispatch for reefer, dry van, flatbed, and car hauling. Nationwide coverage, on-time every time.",
-    "ogTitle": "NEDispatch - Freight Dispatch Services",
-    "ogDescription": "Professional freight dispatch for reefer, dry van, flatbed, and car hauling. Nationwide coverage, on-time every time.",
-    "ogImage": "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1200",
-    "twitterCard": "summary",
-    "twitterTitle": "NEDispatch - Freight Dispatch Services",
-    "twitterDescription": "Professional freight dispatch for reefer, dry van, flatbed, and car hauling. Nationwide coverage, on-time every time.",
-    "twitterImage": "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1200"
-  },
-  "brand": {
-    "logoPrefix": "NED",
-    "logoSuffix": "ispatch",
-    "favicon": "favicon.svg"
-  },
-  "navigation": {
-    "ariaLabel": "Main navigation",
-    "mobileAriaLabel": "Mobile primary navigation",
-    "footerAriaLabel": "Footer navigation",
-    "home": "Home",
-    "services": "Services",
-    "about": "About",
-    "gallery": "Gallery",
-    "faq": "FAQ",
-    "contact": "Contact",
-    "quote": "Get a Quote"
+  "contact": {
+    "phone": "(231) 244-9894",
+    "phoneHref": "tel:2312449894",
+    "email": "neddispatchsrl@gmail.com",
+    "location": "Serving all 48 continental states"
   },
   "visibleSections": [
     "hero",
@@ -38,28 +16,9 @@
     "faq",
     "contact",
     "ctaStrip",
-    "stickyCta",
     "mascot",
     "footer"
   ],
-  "sections": {
-    "aboutLabel": "ABOUT US",
-    "servicesLabel": "WHAT WE HAUL",
-    "servicesTitle": "Our Services",
-    "testimonialsLabel": "WHAT PEOPLE SAY",
-    "testimonialsTitle": "Testimonials",
-    "galleryLabel": "FLEET & FREIGHT",
-    "galleryTitle": "Gallery",
-    "faqLabel": "GOT QUESTIONS?",
-    "faqTitle": "FAQ",
-    "contactLabel": "GET IN TOUCH",
-    "contactTitle": "Contact Us"
-  },
-  "contactCard": {
-    "phoneTitle": "Phone",
-    "emailTitle": "Email",
-    "locationTitle": "Location"
-  },
   "contactForm": {
     "namePlaceholder": "Your Name",
     "emailPlaceholder": "Email Address",
@@ -67,38 +26,140 @@
     "messagePlaceholder": "Tell us about your freight needs...",
     "submitText": "Send Message"
   },
-  "mascot": {
-    "ariaLabel": "NEDi, your dispatch buddy",
-    "message": "Hi, I'm NEDi - ready to keep your loads moving. Need a quote?"
-  },
   "stickyCta": {
     "text": "Get a Quote",
     "href": "#contact"
   },
-  "hero": {
-    "label": "RELIABLE FREIGHT DISPATCH",
-    "title": "Moving Your Freight Forward",
-    "description": "Professional dispatch services for reefer, dry van, flatbed, and car hauling. We keep your loads moving — on time, every time.",
-    "primaryCtaText": "Request a Quote \u2192",
-    "primaryCtaHref": "#contact",
-    "secondaryCtaText": "Our Services",
-    "secondaryCtaHref": "#services"
+  "brand": {
+    "logoPrefix": "NED",
+    "logoSuffix": "ispatch",
+    "favicon": "favicon.svg"
   },
-  "mobileBanner": {
-    "label": "On the road?",
-    "phoneLabel": "(231) 244-9894",
-    "phoneHref": "tel:2312449894"
+  "ctaStrip": {
+    "title": "Ready to move your freight?",
+    "buttonText": "Get a Quote",
+    "buttonHref": "#contact"
+  },
+  "mascot": {
+    "ariaLabel": "NEDi, your dispatch buddy",
+    "message": "Hi, I'm NEDi - ready to keep your loads moving. Need a quote?"
   },
   "about": {
     "title": "Your Trusted Dispatch Partner",
     "paragraph1": "At Ned Dispatch, we specialize in connecting carriers with the right loads. With years of experience in freight logistics, we understand what it takes to keep goods moving efficiently across the country.",
     "paragraph2": "Whether you're hauling temperature-sensitive products in reefers, general cargo in dry vans, vehicles on car haulers, or heavy equipment on flatbeds — we've got the expertise and network to keep your trucks loaded and rolling."
   },
-  "stats": [
-    { "value": "100%", "label": "Fully Insured", "icon": "shield" },
-    { "value": "98%", "label": "On-Time Rate", "icon": "clock" },
-    { "value": "48 States", "label": "Nationwide", "icon": "location" }
+  "sections": {
+    "testimonialsLabel": "WHAT PEOPLE SAY",
+    "faqTitle": "FAQ",
+    "galleryLabel": "FLEET & FREIGHT",
+    "testimonialsTitle": "Testimonials",
+    "galleryTitle": "Gallery",
+    "aboutLabel": "ABOUT US",
+    "contactLabel": "GET IN TOUCH",
+    "servicesLabel": "WHAT WE HAUL",
+    "contactTitle": "Contact Us",
+    "servicesTitle": "Our Services",
+    "faqLabel": "GOT QUESTIONS?"
+  },
+  "mobileBanner": {
+    "label": "On the road?",
+    "phoneLabel": "(231) 244-9894",
+    "phoneHref": "tel:2312449894"
+  },
+  "contactCard": {
+    "phoneTitle": "Phone",
+    "emailTitle": "Email",
+    "locationTitle": "Location"
+  },
+  "gallery": [
+    "images/truck-1.webp",
+    "images/truck-2.webp",
+    "images/truck-3.webp",
+    "images/truck-4.webp",
+    "images/truck-5.webp",
+    "images/truck-6.jpeg",
+    "images/truck-7.webp",
+    "images/truck-8.webp",
+    "images/truck-9.webp"
   ],
+  "navigation": {
+    "contact": "Contact",
+    "mobileAriaLabel": "Mobile primary navigation",
+    "ariaLabel": "Main navigation",
+    "about": "About",
+    "footerAriaLabel": "Footer navigation",
+    "gallery": "Gallery",
+    "faq": "FAQ",
+    "quote": "Get a Quote",
+    "services": "Services",
+    "home": "Home"
+  },
+  "testimonials": [
+    {
+      "initials": "JM",
+      "name": "James M.",
+      "role": "Owner-Operator, Reefer",
+      "quote": "NEDispatch keeps our trucks loaded. Professional, responsive, and they know the lanes. Couldn’t ask for a better partner."
+    },
+    {
+      "initials": "SK",
+      "name": "Sarah K.",
+      "role": "Fleet Manager, Dry Van",
+      "quote": "We switched to NEDispatch last year and our on-time rate went up. They handle the details so we can focus on driving."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How do I get a quote?",
+      "answer": "Fill out the contact form below or call us. We’ll get back with rates and options based on your lane, equipment, and timeline."
+    },
+    {
+      "question": "What areas do you cover?",
+      "answer": "We dispatch loads across all 48 continental US states. Tell us your preferred lanes and we’ll match you with available freight."
+    },
+    {
+      "question": "What equipment do you dispatch?",
+      "answer": "Reefer, dry van, flatbed, and car hauling. We work with owner-operators and small fleets in each category."
+    },
+    {
+      "question": "How quickly can you find me a load?",
+      "answer": "Often same day for common lanes. We’ll confirm availability and get you loaded as soon as you’re ready."
+    }
+  ],
+  "trust": {
+    "label": "Proud to work with carriers and shippers nationwide",
+    "logos": [
+      "Carriers",
+      "Shippers",
+      "Brokers",
+      "Insurers"
+    ]
+  },
+  "hero": {
+    "label": "RELIABLE FREIGHT DISPATCH",
+    "title": "Moving Your Freight Forward",
+    "description": "Professional dispatch services for reefer, dry van, flatbed, and car hauling. We keep your loads moving — on time, every time.",
+    "primaryCtaText": "Request a Quote →",
+    "primaryCtaHref": "#contact",
+    "secondaryCtaText": "Our Services",
+    "secondaryCtaHref": "#services"
+  },
+  "footer": {
+    "year": 2025,
+    "company": "Ned Dispatch"
+  },
+  "seo": {
+    "ogTitle": "NEDispatch - Freight Dispatch Services",
+    "twitterCard": "summary",
+    "ogImage": "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1200",
+    "ogDescription": "Professional freight dispatch for reefer, dry van, flatbed, and car hauling. Nationwide coverage, on-time every time.",
+    "twitterTitle": "NEDispatch - Freight Dispatch Services",
+    "twitterImage": "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1200",
+    "twitterDescription": "Professional freight dispatch for reefer, dry van, flatbed, and car hauling. Nationwide coverage, on-time every time.",
+    "title": "NEDispatch - Freight Dispatch Services",
+    "description": "Ned Dispatch - Professional freight dispatch for reefer, dry van, flatbed, and car hauling. Nationwide coverage, on-time every time."
+  },
   "services": [
     {
       "id": "service-reefer",
@@ -125,67 +186,21 @@
       "description": "Heavy equipment, machinery, and oversized loads. Flatbed expertise and secure, on-time delivery."
     }
   ],
-  "testimonials": [
+  "stats": [
     {
-      "initials": "JM",
-      "name": "James M.",
-      "role": "Owner-Operator, Reefer",
-      "quote": "NEDispatch keeps our trucks loaded. Professional, responsive, and they know the lanes. Couldn\u2019t ask for a better partner."
+      "value": "100%",
+      "label": "Fully Insured",
+      "icon": "shield"
     },
     {
-      "initials": "SK",
-      "name": "Sarah K.",
-      "role": "Fleet Manager, Dry Van",
-      "quote": "We switched to NEDispatch last year and our on-time rate went up. They handle the details so we can focus on driving."
+      "value": "98%",
+      "label": "On-Time Rate",
+      "icon": "clock"
+    },
+    {
+      "value": "48 States",
+      "label": "Nationwide",
+      "icon": "location"
     }
-  ],
-  "trust": {
-    "label": "Proud to work with carriers and shippers nationwide",
-    "logos": ["Carriers", "Shippers", "Brokers", "Insurers"]
-  },
-  "gallery": [
-    "images/truck-1.webp",
-    "images/truck-2.webp",
-    "images/truck-3.webp",
-    "images/truck-4.webp",
-    "images/truck-5.webp",
-    "images/truck-6.jpeg",
-    "images/truck-7.webp",
-    "images/truck-8.webp",
-    "images/truck-9.webp"
-  ],
-  "faq": [
-    {
-      "question": "How do I get a quote?",
-      "answer": "Fill out the contact form below or call us. We\u2019ll get back with rates and options based on your lane, equipment, and timeline."
-    },
-    {
-      "question": "What areas do you cover?",
-      "answer": "We dispatch loads across all 48 continental US states. Tell us your preferred lanes and we\u2019ll match you with available freight."
-    },
-    {
-      "question": "What equipment do you dispatch?",
-      "answer": "Reefer, dry van, flatbed, and car hauling. We work with owner-operators and small fleets in each category."
-    },
-    {
-      "question": "How quickly can you find me a load?",
-      "answer": "Often same day for common lanes. We\u2019ll confirm availability and get you loaded as soon as you\u2019re ready."
-    }
-  ],
-  "contact": {
-    "phone": "(231) 244-9894",
-    "phoneHref": "tel:2312449894",
-    "email": "neddispatchsrl@gmail.com",
-    "location": "Serving all 48 continental states"
-  },
-  "ctaStrip": {
-    "title": "Ready to move your freight?",
-    "buttonText": "Get a Quote",
-    "buttonHref": "#contact"
-  },
-  "footer": {
-    "year": 2025,
-    "company": "Ned Dispatch"
-  }
+  ]
 }
-
